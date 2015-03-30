@@ -9,11 +9,17 @@ class BMI{
 
 public:
   string category(float number);
-   float BMIdata();
+  float BMInum();
+  void setheight(float h);
+  void setmass(float m);
+  float getBMI();
+
 private:
   float height,mass;
-  float BMInumber;
+  float number;
   string BMIs;
+
+
 };
 
 

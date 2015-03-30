@@ -22,36 +22,22 @@
   }
 
 
-  float BMI::BMIdata()
+  float BMI::BMInum()
   {
-     ifstream inFile("file.in",ios::in);
-     if(!inFile){
-       cerr<<"ERROR!(inputfile)"<<endl;
-       exit(1);
-  }
-     ofstream outFile("file.out" , ios::out);
-     if(!inFile){
-       cerr<<"ERROR!(outputfile)"<<endl;
-       exit(1);
-  }
+    if(height!=0)
+    number=10000*mass/(height*height);
+    else
+    exit(3);
 
-   while(inFile >> height >> mass){
+  } 
 
-     BMInumber = 10000*mass/(height*height);
+  void BMI::setmass(float m)
+  { mass=m;}
 
-     if(height!=0){
-category(BMInumber);
-     outFile << setprecision(4)<< BMInumber << "\t" << BMIs << endl;
+  void BMI::setheight(float h)
+  {height=h;}
 
-
-     }
-   }
-
-   } 
-
-
-
-
-
+  float BMI::getBMI()
+  {return number;}
 
 
